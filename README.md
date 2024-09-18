@@ -1,6 +1,6 @@
 This is a simple docker setup to run Prometheus and Grafana for monitoring a Cardano API, to ensure it is synced with the network. 
 
-NOTE: rather than using localhost, you may have more success with a hardcoded IP. Anywhere you see `localhost` in this repo, it was tested using the network IP for the host machine. 
+NOTE: rather than using `localhost`, you may have more success with a hardcoded IP. Anywhere you see `localhost` in this repo, it was tested using the network IP for the host machine. 
 
 TODO: Add a .env for the port and url settings. 
 
@@ -56,7 +56,7 @@ TODO: Add a .env for the port and url settings.
    
 9. Set the timeframe of your choosing (Last 24 hours, for example), and make sure "auto" is selected under refresh frequency.
     
-11. Set up any alerts. Make sure they allow for a range of slot differences, as the API requests won't be perfectly in sync. -200 to 200 is generally enough. 
+11. Set up any alerts. Make sure they allow for a range of slot differences, as the API requests won't be perfectly in sync. -200 to 200 works in my environment. 
 
 ## Troubleshooting
 
@@ -80,3 +80,8 @@ If you encounter issues with the metrics, you can try a few steps. `docker logs`
     - Create a new dashboard and add a panel
     - In the query editor, select Prometheus as the data source
     - Start typing latest_slot_api1 in the metric field, it should auto-complete if the metrics are available
+  
+## Example
+
+![image](https://github.com/user-attachments/assets/b2f9a6d7-e582-4576-8859-7a84a95948fd)
+
