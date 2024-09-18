@@ -8,7 +8,7 @@ slot_difference = Gauge('slot_difference', 'Difference between API 1 and API 2 s
 
 def fetch_api_data():
     try:
-        response1 = requests.get('http://192.168.0.159:8080/block/latest')
+        response1 = requests.get('http://localhost:8080/block/latest')
         data1 = response1.json()
         slot1 = int(data1.get('slot', 0))
     except Exception as e:
